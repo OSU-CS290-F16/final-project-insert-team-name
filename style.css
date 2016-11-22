@@ -1,1 +1,138 @@
-//CSS here
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #04327c;
+  padding: 5px 20px 0 5px;
+}
+
+header h1 {
+  display: inline-block;
+  font-family: 'Niconne', cursive;
+  font-size: 72px;
+  font-weight: 200;
+  margin: 5px 20px;
+  color: #ba0f03;
+  text-shadow: 2px 2px 2px #ffffff;
+}
+
+header h1 a {
+  color: inherit;
+}
+
+header h1 a:hover {
+  text-decoration: none;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  margin: 0 -20px;  /* negative margin here makes up for header padding */
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 20px;
+}
+
+.navbar-item {
+  display: inline;
+}
+
+.navbar-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-item a:hover {
+  background-color: #444;
+}
+
+.navbar-right {
+  float: right;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 20px 20px 100px 20px;
+  min-height: 300px;
+}
+
+.pix {
+  background-color: white;
+  position: relative;
+  width: 300px;
+  min-height: 300px;
+  margin: 20px;
+  font-family: "Helvetica Neue", cursive, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  word-wrap: break-word;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.pix h2 {
+  margin: 20px;
+  text-align: center;
+}
+
+.pix-body {
+  padding: 0 20px
+}
+
+.pix-list {
+  list-style-type: circle;
+}
+
+.pix p {
+  margin: 15px 0;
+}
+
+.pix p.indent-wrapped {
+  padding-left: 50px;
+  text-indent: -50px;
+}
+
+.pix .enlarge-button {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+.pix:hover .enlarge-button {
+  display: initial;
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+}
+
+footer .copyright {
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  padding-right: 25px;
+  font-weight: 200;
+}
