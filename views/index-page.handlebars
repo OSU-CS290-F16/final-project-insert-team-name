@@ -1,0 +1,14 @@
+{{>header}}
+
+<main>
+
+{{#each dogPix}}
+  <section class="pix">
+    <img src={{url}}>
+    <p> {{comment}} {{rate}} </p>
+  </section>
+{{/each}}
+
+</main>
+
+{{> footer}}
