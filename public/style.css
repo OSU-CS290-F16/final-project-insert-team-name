@@ -115,3 +115,63 @@ footer .copyright {
   padding-right: 25px;
   font-weight: 200;
 }
+.sneaky {
+  display: none;
+}
+#add-photo-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+}
+.modal-dialogue {
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  margin: 40px auto;
+  background-color: #fff;
+  border: 2px;
+  box-shadow: 7px 7px 5px #111;
+}
+.modal-header {
+position: relative;
+padding: 10px 20px;
+}
+.modal-header h3 {
+  margin: 0;
+  font-size: 28px;
+}
+.modal-body {
+  padding: 20px;
+}
+.photo-input {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin: 10px 0;
+}
+.photo-input label {
+  font-weight: 600;
+  flex: 1 75px;
+  margin-right: 10px;
+}
+.photo-input input, .photo-input textarea {
+  flex: 6 200px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid #000;
+}
+.photo-input textarea {
+  min-height: 64px;
+}
+.modal-footer button {
+  font-size: 20px;
+  border: 1px solid #000;
+  padding: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}

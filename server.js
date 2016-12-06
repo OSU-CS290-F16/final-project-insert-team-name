@@ -26,17 +26,20 @@ app.get('/', function (req, res) {
     });
 });
 
-app.get('/dogPix', function (req,res)) {
+app.get('/dogPix', function (req,res) {
   var collection = mongoDB.collection('dogPix');
-  collection.find({}).toArray(function (err,dogPix)){
+  collection.find({}).toArray(function (err,dogPix){
     if (err) {
       console.log("== Error fetching dogPix from database:", err);
       res.status(500).send("Error fetching dogPix" + err);
     }
-  }
-}
-
-22
+    else{
+      res.render('index-page',{
+        dogPix: dogPix
+      });
+    }
+  });
+});
 
 
 
