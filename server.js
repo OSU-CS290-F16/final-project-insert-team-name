@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
     });
 });
 
-app.get('/pix/:doggo', function(req,res){
+app.get('/pix/:doggo', function(req,res, next){
   var doggo = dogPix[req.params.doggo];
 
   if(doggo){
@@ -38,6 +38,7 @@ app.get('/pix/:doggo', function(req,res){
       next();
     }
 });
+
 app.get('/dogPix', function (req,res) {
   var collection = mongoDB.collection('dogPix');
   collection.find({}).toArray(function (err,dogPix){
@@ -52,7 +53,6 @@ app.get('/dogPix', function (req,res) {
     }
   });
 });
-
 
 
 
