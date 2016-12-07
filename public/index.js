@@ -12,9 +12,7 @@ document.body.addEventListener('click',function(event){
       document.getElementById('add-photo-modal').classList.toggle('sneaky');
       document.getElementById('modal-backdrop').classList.toggle('sneaky');
   }
-<<<<<<< HEAD
 
-=======
   if (event.target.className=="modal-confirm"){
     var newPic= document.createElement('section');
     newPic.classList.add('pix');
@@ -30,5 +28,5 @@ document.body.addEventListener('click',function(event){
     document.getElementById('new-photo-comment').value="";
     document.getElementById('add-photo-modal').classList.toggle('sneaky');
   }
->>>>>>> 7f1d80a9669028f691725fb83a9174d6a8f87ea1
+
 });
