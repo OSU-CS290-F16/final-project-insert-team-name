@@ -8,5 +8,5 @@ document.body.addEventListener('click',function(event){
       document.getElementById('new-photo-comment').value="";
       document.getElementById('add-photo-modal').classList.toggle('sneaky');
   }
-  
+
 });
