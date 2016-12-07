@@ -4,9 +4,9 @@ document.body.addEventListener('click',function(event){
       document.getElementById('add-photo-modal').classList.toggle('sneaky');
 
   if (event.target.className=="modal-cancel"){
-      document.getElementById('new-photo-url').innerHTML="";
-      document.getElementById('new-photo-comment').innerHTML="";
+      document.getElementById('new-photo-url').value="";
+      document.getElementById('new-photo-comment').value="";
       document.getElementById('add-photo-modal').classList.toggle('sneaky');
-
   }
+  
 });
