@@ -32,10 +32,11 @@ document.body.addEventListener('click',function(event){
     document.getElementById('new-photo-url').value="";
     document.getElementById('new-photo-comment').value="";
     document.getElementById('add-photo-modal').classList.toggle('sneaky');
+    document.getElementById('modal-backdrop').classList.toggle('sneaky');
     post.send(JSON.stringify({
       url: document.getElementById('new-photo-url').value,
       comment: document.getElementById('new-photo-comment').value,
       rate: rate
   }));
-}
+  }
 });
