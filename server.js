@@ -31,7 +31,7 @@ app.get('/pix/:doggo', function(req,res){
 
   if(doggo){
     res.render('large-pix',{
-      doge:
+      doge: doggo
     });
 }
     else{
