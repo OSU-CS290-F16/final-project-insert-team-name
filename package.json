@@ -1,7 +1,7 @@
 {
   "name": "final-project-insert-team-name",
   "version": "1.0.0",
-  "description": "doge nationalist",
+  "description": "Dapper Doggos",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,6 +21,7 @@
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.6",
-    "mongodb": "^2.2.12"
+    "mongodb": "^2.2.12",
+    "validator": "^6.2.0"
   }
 }

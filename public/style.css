@@ -151,9 +151,22 @@ footer .copyright {
   padding-right: 25px;
   font-weight: 200;
 }
+
 .sneaky {
   display: none;
 }
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-image: url("http://assets.change.org/photos/3/at/bo/ujatbOKykUqTyle-1600x900-noPad.jpg?1478966491");
+  opacity: 0.55;
+}
+
 #add-photo-modal {
   position: fixed;
   top: 0;
@@ -170,13 +183,14 @@ footer .copyright {
   margin: 40px auto;
   background-color: #fff;
   border: 2px;
+  border-radius: 10px;
   box-shadow: 7px 7px 5px #111;
 }
 .modal-header {
 position: relative;
 padding: 10px 20px;
 }
-.modal-header h3 {
+.modal-header h1 {
   margin: 0;
   font-size: 28px;
 }
@@ -206,8 +220,10 @@ padding: 10px 20px;
 .modal-footer button {
   font-size: 20px;
   border: 1px solid #000;
+  border-radius: 15px;
   padding: 10px;
   margin-right: 20px;
   margin-left: 20px;
+  background-color: #d9dce0;
   cursor: pointer;
 }
