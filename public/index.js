@@ -15,7 +15,7 @@ document.body.addEventListener('click',function(event){
   if (event.target.className=="modal-confirm"){
     var rate=Math.floor(Math.random()*5)+11;
     var pikkies = document.getElementsByClassName('pix');
-    var postUrl = '/pix/' + pikkies.length+1 + '/new_photo';
+    var postUrl = '/pix/new_photo';
     var post = new XMLHttpRequest();
     post.open('POST', postUrl);
     post.setRequestHeader('Content-Type', 'application/json');
