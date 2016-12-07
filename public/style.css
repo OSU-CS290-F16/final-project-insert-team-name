@@ -44,17 +44,17 @@ nav {
   margin: 0 20px;
 }
 
-.navbar-item {
+.navbar-A, .navbar-R {
   display: inline;
 }
 
-.navbar-item a {
+.navbar-A a, .navbar-R a {
   display: inline-block;
   padding: 10px 20px;
   color: white;
 }
 
-.navbar-item a:hover {
+.navbar-A a:hover, .navbar-R a:hover {
   background-color: #444;
 }
 

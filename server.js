@@ -39,6 +39,20 @@ app.get('/pix/:doggo', function(req,res, next){
     }
 });
 
+app.get('/random', function(req,res, next){
+  var rand = Math.floor(Math.random() * Object.keys(dogPix).length);
+  var doggo = dogPix[rand+1];
+
+  if(doggo){
+    res.render('large-pix',{
+      doge: doggo
+    });
+}
+    else{
+      next();
+    }
+});
+
 app.get('/dogPix', function (req,res) {
   var collection = mongoDB.collection('dogPix');
   collection.find({}).toArray(function (err,dogPix){
