@@ -1,4 +1,3 @@
-
 document.body.addEventListener('click',function(event){
   console.log(event.target);
   if (event.target.className=="add-button"){
