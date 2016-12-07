@@ -1,7 +1,7 @@
 {
   "name": "final-project-insert-team-name",
   "version": "1.0.0",
-  "description": "doge nationalist",
+  "description": "Dapper Doggos",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
