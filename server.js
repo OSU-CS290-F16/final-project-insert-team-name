@@ -26,18 +26,19 @@ app.get('/', function (req, res) {
     });
 });
 
-app.get('/pix/:doggo', function(req,res){
+app.get('/pix/:doggo', function(req,res, next){
   var doggo = dogPix[req.params.doggo];
 
   if(doggo){
     res.render('large-pix',{
-      doge:
+      doge: doggo
     });
 }
     else{
       next();
     }
 });
+
 app.get('/dogPix', function (req,res) {
   var collection = mongoDB.collection('dogPix');
   collection.find({}).toArray(function (err,dogPix){
