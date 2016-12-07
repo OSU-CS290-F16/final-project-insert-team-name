@@ -14,6 +14,7 @@ document.body.addEventListener('click',function(event){
   }
 
   if (event.target.className=="modal-confirm"){
+    var rate=Math.floor(Math.random()*5)+11;
     var pikkies = document.getElementsByClassName('pix');
     var postUrl = '/pix/' + pikkies.length+1 + '/new_photo';
     var post = new XMLHttpRequest();
@@ -24,7 +25,7 @@ document.body.addEventListener('click',function(event){
     var text="<a href=/pix/"+(pikkies.length+1)+"> <img src="+document.getElementById('new-photo-url').value +"></a>";
     newPic.innerHTML=text;
     var com = document.createElement('p');
-    var c = document.createTextNode(document.getElementById('new-photo-comment').value);
+    var c = document.createTextNode(document.getElementById('new-photo-comment').value +" "+ rate+"/10");
     com.appendChild(c);
     newPic.appendChild(com);
     document.getElementsByTagName('main')[0].appendChild(newPic);
@@ -33,9 +34,8 @@ document.body.addEventListener('click',function(event){
     document.getElementById('add-photo-modal').classList.toggle('sneaky');
     post.send(JSON.stringify({
       url: document.getElementById('new-photo-url').value,
-      comment: document.getElementById('new-photo-comment').value
+      comment: document.getElementById('new-photo-comment').value,
+      rate: rate
   }));
 }
-  }
-
 });
