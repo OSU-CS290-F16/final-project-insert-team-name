@@ -10,9 +10,13 @@ document.body.addEventListener('click',function(event){
       document.getElementById('add-photo-modal').classList.toggle('sneaky');
   }
   if (event.target.className=="modal-confirm"){
+    var pikkies = document.getElementsByClassName('pix');
+    var postUrl = '/pix/' + pikkies.length+1 + '/new_photo';
+    var post = new XMLHttpRequest();
+    post.open('POST', postUrl);
+    post.setRequestHeader('Content-Type', 'application/json');
     var newPic= document.createElement('section');
     newPic.classList.add('pix');
-    var pikkies = document.getElementsByClassName('pix');
     var text="<a href=/pix/"+(pikkies.length+1)+"> <img src="+document.getElementById('new-photo-url').value +"></a>";
     newPic.innerHTML=text;
     var com = document.createElement('p');
@@ -23,5 +27,9 @@ document.body.addEventListener('click',function(event){
     document.getElementById('new-photo-url').value="";
     document.getElementById('new-photo-comment').value="";
     document.getElementById('add-photo-modal').classList.toggle('sneaky');
-  }
+    post.send(JSON.stringify({
+      url: document.getElementById('new-photo-url').value,
+      comment: document.getElementById('new-photo-comment').value
+  }));
+}
 });
