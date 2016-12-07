@@ -37,13 +37,17 @@ document.body.addEventListener('click',function(event){
     com.appendChild(c);
     newPic.appendChild(com);
     document.getElementsByTagName('main')[0].appendChild(newPic);
-    document.getElementById('new-photo-url').value="";
-    document.getElementById('new-photo-comment').value="";
     document.getElementById('add-photo-modal').classList.toggle('sneaky');
     document.getElementById('modal-backdrop').classList.toggle('sneaky');
+    var yup = document.getElementById('new-photo-url').value;
+    var same = document.getElementById('new-photo-comment').value;
+    document.getElementById('new-photo-url').value="";
+    document.getElementById('new-photo-comment').value="";
+    console.log(yup);
+    console.log(same);
     post.send(JSON.stringify({
-      url: document.getElementById('new-photo-url').value,
-      comment: document.getElementById('new-photo-comment').value,
+      url: yup,
+      comment: same,
       rate: rate
   }));
   }

@@ -57,6 +57,8 @@ app.get('/random', function(req,res, next){
 
 app.post('/pix/new_photo', function(req,res,next){
   var newkey = Object.keys(dogPix).length+1;
+  console.log(req.body.url);
+  console.log(req.body.comment);
   var newdoggo =JSON.stringify({
     url:req.body.url,
     comment:req.body.comment,
@@ -64,6 +66,7 @@ app.post('/pix/new_photo', function(req,res,next){
   });
     fs.openSync('dog-pix.json','a');
     fs.writeFileSync('dog-pix.json',newdoggo);
+    dogPix= require('./dog-pix');
     res.status(200).send();
 });
 app.get('/dogPix', function (req,res) {
