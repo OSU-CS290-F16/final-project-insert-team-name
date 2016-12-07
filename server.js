@@ -63,7 +63,7 @@ app.post('/pix/new_photo', function(req,res,next){
     comment:req.body.comment,
     rate:rate
   };
-    dogPix.newkey=newdoggo;
+    dogPix[newkey]=newdoggo;
     fs.openSync('dog-pix.json','w');
     fs.writeFileSync('dog-pix.json',JSON.stringify(dogPix));
     res.status(200).send();
